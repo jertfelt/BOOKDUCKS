@@ -45,6 +45,11 @@ body {
 
 .homepage{
   &__login{
+    &--img {
+      width:100%;
+      margin:0 auto;
+      margin-bottom:-1rem;
+    }
     background-color: $color--primered;
     margin-top:-1rem;
     color: $color--lightback;

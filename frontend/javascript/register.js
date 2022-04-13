@@ -17,6 +17,7 @@ let register = async () => {
       
       let token = response.data.jwt;
       sessionStorage.setItem("token", token);
+      localStorage.setItem("user", username)
       registerMessage.innerHTML=`
       <p>Lyckad registrering. Välkommen ${newUsername.value}. Nu är du inloggad</p>`
       console.log("User registration successful!")

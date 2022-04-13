@@ -165,3 +165,5 @@ const getAll = () => {
 getHomepage();
 getAll();
 getGenres();
+
+

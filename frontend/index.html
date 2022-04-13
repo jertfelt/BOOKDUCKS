@@ -27,10 +27,31 @@
     <div id="headerMember">
     <span id="loggedinUser">Du är inte inloggad!
     </span>
-    <div class="header__menu">
+     <!--ikon dropdown-->
+     <span class="nav__burger">
+      <img 
+      src="./styles/img\yellowburger.png" 
+      alt="Dropdown" 
+      id="menuToggle"
+      class="nav__button">
+    </span>
+      <!--dropdown meny-->
+      <ul id="dropDownMenu"  
+      class="dropdown">
+      <div id="menu" class="mainmenu__mobile">
+      <span class="dropdown--close">
+        <img 
+        src="./styles/img/yellowclosing.png" 
+        alt="Stäng meny"
+        class="dropdown--close"
+        id="closeDropDown"/>
+      </span>
+      <li>
       <a href="#" id="homepage">Hem</a>
-      <a href="#" class="button__becomemember">Logga in</a>
-      <a href="#" class="button__becomemember">Registrera dig</a>
+      </li>
+      <li><a href="#" id="logIn">Logga in</a></li>
+      <li><a href="#" class="button__becomemember">Registrera dig</a></li>
+      
     </div>
     </div>
     </nav>
@@ -40,9 +61,6 @@
     <section id="homepage" class="section">
       <div id="hero" class="hero">
       </div>
-
-     
-
       <div id="allbooks" class="homepage__content">
         <div class="headline__books">
         <h2 class="text--genre">Låna en bok</h2>
@@ -56,15 +74,46 @@
         </div>
         </article>
       </div>
-    
+    </section>
+
+    <section id="login" class="section">
+      <section class="homepage__login">
+        <div class="homepage__login--form">
+          <h2>Logga in:</h2>
+          <label for="username">
+            Användarnamn:</label>
+          <input type="text"
+          placeholder="Användarnamn/Email"
+          class="input__username">
+          <label for="password">
+            Lösenord:</label>
+          <input type="text"
+          placeholder="Lösenord"  class="input__password">
+          <span class="row">
+            <button class="submitLogin">
+              Logga in</button>
+            <button id="forgottenPassword">
+              Glömt lösenord?</button>
+          </span>
+        </div>
+      <span class="homepage__login--register">
+      <p>Kom ihåg! <br> För att kunna låna någon av våra spännande böcker behöver du bli medlem. Det är helt gratis och tar inte en lång stund.</p>
+      <button class=" button__becomemember">Bli medlem nu</button>
+      </span>
+      
+      </section>
+      <img src="./styles/img/duck-farming.jpg"
+      alt="Riktiga ankor som inte läser"
+      class="homepage__login--img">
+   
     </section>
     <section id="register" class="section">
-
       <section class="register__welcome">
         <img src="./styles/img/ducks.png"
         alt="Ankor som läser"
         class="register__welcome--duck">
-      <div class="register__welcome--info">
+       
+      <article class="register__welcome--info">
         <h2>Välkommen!</h2>
         <p>Här på vårt fina community tar vi hand om varandra. Som medlem får du låna, och låna ut, böcker av alla dess slag. Några saker som är bra att känna till: </p>
         <ul>
@@ -94,12 +143,11 @@
         <button id="submitRegister">Bli medlem</button>
         <span id="messageRegister" class="error text--light"></span>
         </div>
-      </div>
+      </article>
 
       <div class="genre">
         
-      <img src="./styles/img/duck-farming.jpg"
-      alt="Riktiga ankor som inte läser">
+     
         <h2>Våra genres:</h2>
         <div id="genregrid"></div>
       </div>
@@ -107,34 +155,13 @@
     </section>
 
     <section id="profilePage" class="section">
-
+      <div id="renderedProfile">
+       
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <section class="homepage__login">
-      <div class="homepage__login--form">
-        <h2>Logga in:</h2>
-        <label for="username">
-          Användarnamn:</label>
-        <input type="text"
-        placeholder="Användarnamn/Email"
-        class="input__username">
-        <label for="password">
-          Lösenord:</label>
-        <input type="text"
-        placeholder="Lösenord"  class="input__password">
-        <span class="row">
-          <button class="submitLogin">
-            Logga in</button>
-          <button id="forgottenPassword">
-            Glömt lösenord?</button>
-        </span>
-      </div>
-    <span class="homepage__login--register">
-    <p>Kom ihåg! <br> För att kunna låna någon av våra spännande böcker behöver du bli medlem. Det är helt gratis och tar inte en lång stund.</p>
-    <button class=" button__becomemember">Bli medlem nu</button>
-    </span>
-    </section>
+   
 
     <img src="https://avatars.githubusercontent.com/u/30622818?s=40&v=4" class="logotype__jertfelt"><span>
     <h4>Det här är en skoluppgift.</h4>

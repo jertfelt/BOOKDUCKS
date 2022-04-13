@@ -264,6 +264,12 @@ body {
   padding: 2rem;
 }
 
+.homepage__login--img {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: -1rem;
+}
+
 @media only screen and (min-width: 768px) {
   .homepage__login {
     display: -webkit-box;
@@ -627,6 +633,54 @@ body {
 .genre__content:hover {
   background-color: #ac4747;
   color: blanchedalmond;
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdown--close {
+  cursor: pointer;
+  margin-left: 3rem;
+}
+
+.dropdown--close img {
+  height: 30px;
+}
+
+.mainmenu__mobile {
+  background-color: #ac4747;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  padding: 30px 20px;
+}
+
+.mainmenu__mobile li {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0.2rem;
+}
+
+.mainmenu__mobile li a {
+  color: blanchedalmond;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding: 0px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mainmenu__mobile li a:hover {
+  color: #ffc800;
+}
+
+.nav__button {
+  height: 40px;
 }
 
 .hidden {

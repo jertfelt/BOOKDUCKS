@@ -1,0 +1,48 @@
+.dropdown{
+  display:none;
+  
+  &--close{
+    cursor: pointer;
+   margin-left:3rem;
+    img {
+      height: 30px;
+    }
+  }
+}
+
+
+.mainmenu__mobile{
+  background-color: $color--primered;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  padding: 30px 20px;    
+
+  li {
+    
+    display: block;
+    margin-bottom: 10px;
+    padding:0.2rem;
+
+    a {
+      color: $color--lightback;
+      font-size: 16px;
+      font-weight:bold;
+      display: block;
+      padding: 0px 0;
+      text-align: center;
+      text-decoration: none;
+      
+    }
+    a:hover{
+      color: $color--orange;
+    }
+  }
+ 
+}
+.nav__button{
+    height: 40px;
+}

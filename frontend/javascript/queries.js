@@ -49,3 +49,8 @@ link.addEventListener("click", (e) => {
   changeActivePage("register")
 });
 })
+
+document.getElementById("logIn").addEventListener("click",
+(e) => {
+  changeActivePage("login")
+})
