@@ -1,0 +1,41 @@
+// Variables
+// --------------------
+@import 'variables/colors';
+@import 'variables/typography';
+
+// Mixins
+// --------------------
+@import 'mixins/mixins';
+
+// Reset and base files
+// --------------------
+@import 'base/reset';
+@import 'base/base';
+@import 'base/font';
+
+// Objects
+// --------------------
+@import "objects/books";
+@import "objects/headings";
+@import "objects/btn";
+@import "objects/links";
+
+// Layouts
+// --------------------
+@import "layouts/header";
+@import "layouts/homepage";
+@import "layouts/footer";
+@import "layouts/loginregister";
+@import "layouts/profilepage";
+
+
+// Components
+// --------------------
+
+@import "components/modal";
+
+
+// Libraries and helpers
+// ---------------------
+@import 'library/helpers';
+
