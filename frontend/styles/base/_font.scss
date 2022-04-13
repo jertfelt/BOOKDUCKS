@@ -1,0 +1,14 @@
+.text{
+  &--uppercase{
+    text-transform: uppercase;
+  }
+  &--genre{
+    font-family: $font--bubbly;
+  }
+  &--normal{
+    font-family: $font--regular;
+  }
+  &--red{
+    color:$color--darkred;
+  }
+}

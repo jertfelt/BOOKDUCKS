@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookDucks community</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Rubik+Bubbles&family=Rubik+Glitch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <div class="logotype">
+    <h1>BookDucks</h1>
+    <a href="index.html">
+      <img
+      src="./styles/img/ducksolo.png"
+      alt="bookducks logotyp"
+      >
+    </a>
+    </div>
+    <div id="headerMember">
+    <span id="loggedinUser">Du är inte inloggad!
+    </span>
+    <div class="header__menu">
+      <a href="#" id="homepage">Hem</a>
+      <a href="#" class="button__becomemember">Logga in</a>
+      <a href="#" class="button__becomemember">Registrera dig</a>
+    </div>
+    </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="homepage" class="section">
+      <div id="hero" class="hero">
+      </div>
+
+     
+
+      <div id="allbooks" class="homepage__content">
+        <div class="headline__books">
+        <h2 class="text--genre">Låna en bok</h2>
+        <p>Pocketböcker, inbundna böcker och ibland serietidningar!</p>
+        </div>
+        <article id="books"></article>
+        <article id="audiobooks">
+          <div class="headline__books">
+          <h2 class="text--genre">Lyssna på en bok?</h2>
+          <p>Böcker som du kan få låna inlogg till!</p>
+        </div>
+        </article>
+      </div>
+    
+    </section>
+    <section id="register" class="section">
+
+      <section class="register__welcome">
+        <img src="./styles/img/ducks.png"
+        alt="Ankor som läser"
+        class="register__welcome--duck">
+      <div class="register__welcome--info">
+        <h2>Välkommen!</h2>
+        <p>Här på vårt fina community tar vi hand om varandra. Som medlem får du låna, och låna ut, böcker av alla dess slag. Några saker som är bra att känna till: </p>
+        <ul>
+          <li>Vi är bara inom Sveriges gränser</li>
+          <li>Vi vill inte ha trasiga böcker i omlopp</li>
+          <li>Har du sönder något så betalar du</li>
+          <li>Låntagaren står för frakten</li>
+        </ul>
+        <h3>Redo att bli en bokanka?</h3>
+        <div class="register__welcome--form">
+          <h3>Registrera dig här:</h3>
+          <label for="usernameRegister">
+            Användarnamn:</label>
+          <input type="text" id="usernameRegister" placeholder="Ditt namn">
+          <label for="emailRegister">
+            Email:</label>
+          <input type="text" id="emailRegister"
+          placeholder="Din email">
+        <span>
+          <label for="passwordRegister">
+            Lösenord: </label>
+          <input type="text"
+          id="passwordRegister"
+          placeholder="*****">
+          <h5>(Lösenordet behöver vara minst 6 tecken långt, ha en stor bokstav och en siffra)</h5>
+        </span>
+        <button id="submitRegister">Bli medlem</button>
+        <span id="messageRegister" class="error text--light"></span>
+        </div>
+      </div>
+
+      <div class="genre">
+        
+      <img src="./styles/img/duck-farming.jpg"
+      alt="Riktiga ankor som inte läser">
+        <h2>Våra genres:</h2>
+        <div id="genregrid"></div>
+      </div>
+      </section>
+    </section>
+
+    <section id="profilePage" class="section">
+
+    </section>
+  </main>
+  <footer class="footer">
+    <section class="homepage__login">
+      <div class="homepage__login--form">
+        <h2>Logga in:</h2>
+        <label for="username">
+          Användarnamn:</label>
+        <input type="text"
+        placeholder="Användarnamn/Email"
+        class="input__username">
+        <label for="password">
+          Lösenord:</label>
+        <input type="text"
+        placeholder="Lösenord"  class="input__password">
+        <span class="row">
+          <button class="submitLogin">
+            Logga in</button>
+          <button id="forgottenPassword">
+            Glömt lösenord?</button>
+        </span>
+      </div>
+    <span class="homepage__login--register">
+    <p>Kom ihåg! <br> För att kunna låna någon av våra spännande böcker behöver du bli medlem. Det är helt gratis och tar inte en lång stund.</p>
+    <button class=" button__becomemember">Bli medlem nu</button>
+    </span>
+    </section>
+
+    <img src="https://avatars.githubusercontent.com/u/30622818?s=40&v=4" class="logotype__jertfelt"><span>
+    <h4>Det här är en skoluppgift.</h4>
+    <p>Se mer: <a href="https://github.com/jertfelt/BOOKDUCKS">Github</a></p>
+    </span>
+  </footer>
+
+  <!--javascript-->
+  <script src="./javascript/utilities.js"></script>
+  <script src="./javascript/queries.js"></script>
+  <script src="./javascript/renderitems.js"></script>
+  <script src="./javascript/register.js"></script>
+  <script src="./javascript/login.js"></script>
+</body>
+
+</html>

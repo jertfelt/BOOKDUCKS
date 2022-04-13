@@ -1,0 +1,12 @@
+.footer{
+  @include flexInst(row, center, space-around);
+  background-color: $color--primered;
+  padding:1rem;
+  color: $color--lightback;
+  img {
+    border-radius: 50%;
+  }
+  a {
+    color: $color--lightback;
+  }
+}

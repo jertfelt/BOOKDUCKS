@@ -1,0 +1,37 @@
+.header{
+  background-color: $color--primered;
+  padding:1rem;
+  margin: 0 auto;
+  color: $color--orange;
+
+  .logotype {
+    @include flexInst(row-reverse, center, space-around);
+    img{max-height:50px;}
+    h1{
+      font-family: $font--bubbly;
+      letter-spacing: 0.1rem;
+    }
+  }
+  nav {
+
+  @include flexInst(row, center, space-around);
+  }
+  #headerMember{
+    @include flexInst(row, center, space-between);
+  }
+  #loggedinUser{
+    color: $color--lightback;
+    margin-right:30px;
+  }
+  &__menu{
+    @include flexInst(column, flex-start, space-around);
+
+    color: $color--lightback;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $color--lightback;
+    }
+  }
+}
