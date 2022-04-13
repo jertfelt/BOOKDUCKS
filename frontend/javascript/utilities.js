@@ -15,5 +15,5 @@ let inputPassword = document.querySelectorAll(".input__password");
 let loggingIn = document.querySelectorAll(".submitLogin");
 let registerNew = document.getElementById("submitRegister");
 let registerMessage = document.getElementById("messageRegister");
-
+let loggedInNav = document.getElementById("loggedinUser");
 

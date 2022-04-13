@@ -1,8 +1,12 @@
 
-//fetch Users
+const confirmLogin = () => {
+
+}
+
 let login = async () => {
   let input = inputUserName[0].value;
   let password = inputPassword[0].value;
+
   if (input == "" || password == ""){
     alert("Du behöver fylla i båda fälten")
   }
@@ -13,10 +17,12 @@ let login = async () => {
     password: password
   })
   .then(response => {
-    console.log(response);
+    let token = response.data.jwt;
+    sessionStorage.setItem("token", token)
+    loggedInNav.innerHTML=`Hej <b>${input}</b>`
+    confirmLogin();
   })
   .catch(error => {
-    
     let errorMessage = error.response.data.error.message;
     console.log(errorMessage)
     if (errorMessage == "Invalid identifier or password"){
@@ -27,14 +33,14 @@ let login = async () => {
     }
   })
 }
-
-
-const confirmLogin = () => {
-
-}
 loggingIn.forEach(button => { 
   button.addEventListener("click", (e) => {
     e.preventDefault();
     login();
   })
 })
+
+let logout = () => {
+  sessionStorage.clear();
+  changeActivePage("homepage");
+}

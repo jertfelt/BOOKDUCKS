@@ -14,12 +14,14 @@ let register = async () => {
       password:newPassword.value,
     })
     .then(response => {
-      console.log(response);
+      
       let token = response.data.jwt;
       sessionStorage.setItem("token", token);
       registerMessage.innerHTML=`
       <p>Lyckad registrering. Välkommen ${newUsername.value}. Nu är du inloggad</p>`
       console.log("User registration successful!")
+      loggedInNav.innerHTML=`Hej <b>${newUsername.value}<b>`
+      confirmLogin();
     })
     .catch(error => {
       let errorMessage = error.response.data.error.message;
