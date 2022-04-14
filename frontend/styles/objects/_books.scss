@@ -11,10 +11,12 @@
       margin-left:10px;
       line-height: 1rem;
       h3{
+        font-family: $font--heading;
         line-height:1.2rem;
         margin-top:-0.1rem;
       }
       h4{
+        font-family: $font--heading;
         color: $color--darkred;
       }
     }
@@ -48,6 +50,7 @@
     }
     
     h4{
+      font-family: $font--heading;
       color: $color--darkred;
     }
   }

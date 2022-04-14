@@ -2,56 +2,67 @@
   @include flexInst(column,center,center);
   margin-bottom:3rem;
   padding-bottom:3rem;
- &--duck{
-   max-height:200px;
- }
- &--info{
-   h2{
-     color: $color--darkred;
-   }
+  
+  &--duck{
+    max-height:200px;
+  }
+
+  &--info{
+    h3{
+      font-family: $font--heading;
+    }
+    h2{
+    font-family: $font--heading;
+    font-size:48px;
+    line-height:1.3rem;
+    color: $color--darkred;
+    }
+
   max-width: 40%;
   line-height:1.2rem;
- }
- ul{
-   list-style:square;
-}
-&--form{
-  background-color: $color--primered;
-  border-radius: 19px;
-  color: $color--lightback;
-  padding:2rem;
-  @include flexInst(column,center,center);
-  label{
-    margin-bottom:0.3rem;
-    
   }
-  input{
-    margin-bottom:0.5rem;
-    background-color: $color--lightback;
-    color: $color--black;
-    border:none;
-    padding:0.3rem;
+
+  ul{
+  list-style:square;
   }
-  span{
-    @include flexInst(column,center,center);
-    h5{margin-top:0;
-    font-weight:400;
+
+  &--form{
+    background-color: $color--primered;
+    border-radius: 19px;
     color: $color--lightback;
-    width:40%;
+    padding:2rem;
+    @include flexInst(column,center,center);
+    label{
+      margin-bottom:0.3rem;
+      
+    }
+    input{
+      margin-bottom:0.5rem;
+      background-color: $color--lightback;
+      color: $color--black;
+      border:none;
+      padding:0.3rem;
+    }
+    span{
+      @include flexInst(column,center,center);
+      h5{margin-top:0;
+      font-weight:400;
+      color: $color--lightback;
+      width:40%;
+      }
+    }
+    button{
+      padding:0.5rem;
+      background-color: $color--orange;
+      border:none;
+      color: $color--black;
+      font-weight: bold;
+      border-radius: 9px;
+    }
+    button:hover{
+      background-color: $color--lightback;
     }
   }
-  button{
-    padding:0.5rem;
-    background-color: $color--orange;
-    border:none;
-    color: $color--black;
-    font-weight: bold;
-    border-radius: 9px;
-  }
-  button:hover{
-    background-color: $color--lightback;
-  }
-}
 }
 
 .error{
@@ -77,14 +88,17 @@
   h2{
     font-size: 48px;
     margin-top:3rem;
-    font-family: $font--bubbly;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    font-family: $font--heading;
+    font-weight: bold;
+   
     color: $color--darkred;
   }
   &__content{
     background-color: $color--lightback;
     h2{
+      font-size: 32px;
+      text-transform: uppercase;
+      font-family: $font--heading;
       margin-top:1rem;
       color: $color--black;
     }
@@ -101,5 +115,8 @@
   &__content:hover{
     background-color: $color--primered;
     color: $color--lightback;
+    h2{
+      color: $color--orange;
+    }
   }
 }

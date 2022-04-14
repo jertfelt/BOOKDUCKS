@@ -41,7 +41,7 @@ let renderHome = (data) => {
     <div class="hero__content">
     <h2>${homepageTitle}</h2>
     <h3>${homepageAbout}</h3>
-    <a href="#" class="button__becomemember"><h3>Läs mer!</h3></a>
+   
     </div>`
     homepageHero.appendChild(homepageContent)
 }

@@ -23,7 +23,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     h2{
+      font-family: $font--heading;
       color:black;
+    }
+    a{
+      color:black;
+      font-family: $font--heading;
     }
   }
 }
@@ -33,6 +38,7 @@ body {
     @include flexInst(column,center,center);
     line-height:0.2rem;
     h2{
+      font-family: $font--heading;
       font-size: 48px;
       margin-top:2rem;
       color: $color--primered;
@@ -45,6 +51,7 @@ body {
 
 .homepage{
   &__login{
+    
     &--img {
       width:100%;
       margin:0 auto;
@@ -58,6 +65,7 @@ body {
       @include flexInst(row,center,space-around);
     }
     padding:2rem;
+
     &--form{
     font-weight: bold;
      @include flexInst(column,flex-start,center);

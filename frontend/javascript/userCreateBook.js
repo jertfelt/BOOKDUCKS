@@ -27,7 +27,6 @@ let addBook = async (url,type) => {
   }
   let userLocal = localStorage.getItem("userObj");
   let user = JSON.parse(userLocal);
-  console.log(user)
   let response = await axios.post(url, {
       data: {
           author: inputAuthor.value,
@@ -36,7 +35,7 @@ let addBook = async (url,type) => {
           description: inputDescription.value,
           length: inputLength.value,
           type: type,
-          users: user
+          users: user,
           // picture: inputImgFile.value
       }
   }, {

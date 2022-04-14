@@ -29,11 +29,13 @@
 }
 
 .book__content span h3 {
+  font-family: "Arvo", serif;
   line-height: 1.2rem;
   margin-top: -0.1rem;
 }
 
 .book__content span h4 {
+  font-family: "Arvo", serif;
   color: #4e0909;
 }
 
@@ -77,13 +79,8 @@
 }
 
 .book__user h4 {
+  font-family: "Arvo", serif;
   color: #4e0909;
-}
-
-.rating {
-  padding: 1rem;
-  border-radius: 50%;
-  font-weight: bold;
 }
 
 .button__genre {
@@ -214,7 +211,13 @@ body {
 }
 
 .hero__content h2 {
+  font-family: "Arvo", serif;
   color: black;
+}
+
+.hero__content a {
+  color: black;
+  font-family: "Arvo", serif;
 }
 
 .headline__books {
@@ -236,6 +239,7 @@ body {
 }
 
 .headline__books h2 {
+  font-family: "Arvo", serif;
   font-size: 48px;
   margin-top: 2rem;
   color: #ac4747;
@@ -481,7 +485,14 @@ body {
   line-height: 1.2rem;
 }
 
+.register__welcome--info h3 {
+  font-family: "Arvo", serif;
+}
+
 .register__welcome--info h2 {
+  font-family: "Arvo", serif;
+  font-size: 48px;
+  line-height: 1.3rem;
   color: #4e0909;
 }
 
@@ -593,9 +604,8 @@ body {
 .genre h2 {
   font-size: 48px;
   margin-top: 3rem;
-  font-family: "Rubik Bubbles", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  font-family: "Arvo", serif;
+  font-weight: bold;
   color: #4e0909;
 }
 
@@ -622,6 +632,9 @@ body {
 }
 
 .genre__content h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "Arvo", serif;
   margin-top: 1rem;
   color: #000;
 }
@@ -633,6 +646,10 @@ body {
 .genre__content:hover {
   background-color: #ac4747;
   color: blanchedalmond;
+}
+
+.genre__content:hover h2 {
+  color: #ffc800;
 }
 
 .dropdown {
