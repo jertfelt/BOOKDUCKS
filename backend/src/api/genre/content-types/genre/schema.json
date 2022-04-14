@@ -33,13 +33,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::audiobook.audiobook",
-      "inversedBy": "genres"
+      "mappedBy": "genres"
     },
     "books": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::book.book",
-      "inversedBy": "genres"
+      "mappedBy": "genres"
     }
   }
 }

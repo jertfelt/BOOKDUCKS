@@ -50,7 +50,8 @@ link.addEventListener("click", (e) => {
 });
 })
 
-document.getElementById("logIn").addEventListener("click",
+document.getElementById("logInSection").addEventListener("click",
 (e) => {
   changeActivePage("login")
 })
+

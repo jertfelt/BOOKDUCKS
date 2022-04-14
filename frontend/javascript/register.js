@@ -14,7 +14,6 @@ let register = async () => {
       password:newPassword.value,
     })
     .then(response => {
-      
       let token = response.data.jwt;
       sessionStorage.setItem("token", token);
       localStorage.setItem("user", username)

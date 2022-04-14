@@ -50,6 +50,11 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "books"
+    },
+    "type": {
+      "type": "string",
+      "required": false,
+      "default": "pocketbok"
     }
   }
 }

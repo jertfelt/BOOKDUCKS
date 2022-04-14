@@ -1,3 +1,6 @@
+allBooks = [];
+
+
 let getHomepage = async () => {
   let {data} = await axios.get("http://localhost:1337/api/homepage?populate=*", {
   })
@@ -70,6 +73,7 @@ let renderAllBooks = (info) => {
   let arrayOfBooks = info.data;
  
   arrayOfBooks.forEach(book => {
+    allBooks.push(book);
     let bookElem = document.createElement("div");
     bookElem.classList.add("homepage__grid--griditem")
     let genres = [];
@@ -113,6 +117,7 @@ let renderAllAudioBooks = (data) => {
   bookGrid.classList.add("homepage__grid");
   let arrayOfBooks = data.data;
   arrayOfBooks.forEach(book => {
+    allBooks.push(book);
     let bookElem = document.createElement("div");
     let genres = [];
     let bookGenres = book.attributes.genres.data;

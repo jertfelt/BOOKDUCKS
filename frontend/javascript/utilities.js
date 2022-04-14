@@ -1,4 +1,5 @@
 //*---------variables
+//navigation
 let sectionHomepage = document.getElementById("homepage");
 let sectionLogin = document.getElementById("login");
 let sectionRegister = document.getElementById("register");
@@ -8,6 +9,8 @@ let homepageGenreGrid = document.getElementById("genregrid");
 let seeAllBooks = document.getElementById("allbooks");
 let onlyBooks = document.getElementById("books");
 let onlyAudio = document.getElementById("audiobooks");
+
+//--login and register
 let becomeMember = document.querySelectorAll(".button__becomemember");
 let forgotPassword = document.getElementById("forgottenPassword");
 let inputUserName = document.querySelectorAll(".input__username");
@@ -16,8 +19,22 @@ let loggingIn = document.querySelectorAll(".submitLogin");
 let registerNew = document.getElementById("submitRegister");
 let registerMessage = document.getElementById("messageRegister");
 let loggedInNav = document.getElementById("loggedinUser");
+let errorMessageContainer = document.querySelector("#errorMessageContainer");
+
+//--profilepage
 let renderedProfile = document.getElementById("renderedProfile");
 
+//---profilepage > add book form
+let inputAudio = document.getElementById("audio");
+let inputBook = document.getElementById("book");
+let inputRating = document.getElementById("bookRating");
+let inputLength = document.getElementById("bookLength");
+let inputDescription = document.getElementById("bookDescription");
+let inputAuthor = document.getElementById("bookAuthor");
+let inputTitle = document.getElementById("bookTitle");
+let inputImgFile = document.getElementById("bookImage");
+let bookImagesProfile = document.getElementById("defaultBookImages");
+let addBookButt = document.getElementById("addBookBtn");
 
 //dropdown button
 const menuButton = document.getElementById("menuToggle");
@@ -56,3 +73,44 @@ document.addEventListener('keydown', function(event){
   }
 });
 
+//*---transforming date to more readable text
+
+
+const dateTransform = (nr) => {
+if (nr === "04"){
+  return "April"
+}
+else if (nr === "01"){
+  return "Januari"
+}
+else if (nr === "02"){
+  return "Februari"
+}
+else if (nr === "03"){
+  return "Mars"
+}
+else if (nr === "05"){
+  return "Maj"
+}
+else if (nr === "06"){
+  return "Juni"
+}
+else if (nr === "07"){
+  return "Juli"
+}
+else if (nr === "08"){
+  return "Augusti"
+}
+else if (nr === "09"){
+  return "September"
+}
+else if (nr === "10"){
+  return "Oktober"
+}
+else if (nr === "11"){
+  return "November"
+}
+else if (nr === "12"){
+  return "December"
+}
+}

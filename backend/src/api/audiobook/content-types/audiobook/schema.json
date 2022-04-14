@@ -52,6 +52,11 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "audiobooks"
+    },
+    "type": {
+      "type": "string",
+      "default": "ljudbok",
+      "required": false
     }
   }
 }
