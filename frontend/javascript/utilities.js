@@ -10,9 +10,9 @@ let seeAllBooks = document.getElementById("allbooks");
 let onlyBooks = document.getElementById("books");
 let onlyAudio = document.getElementById("audiobooks");
 
+
 //--login and register
 let becomeMember = document.querySelectorAll(".button__becomemember");
-let forgotPassword = document.getElementById("forgottenPassword");
 let inputUserName = document.querySelectorAll(".input__username");
 let inputPassword = document.querySelectorAll(".input__password");
 let loggingIn = document.querySelectorAll(".submitLogin");
@@ -25,23 +25,25 @@ let errorMessageContainer = document.querySelector("#errorMessageContainer");
 let renderedProfile = document.getElementById("renderedProfile");
 
 //---profilepage > add book form
+let createBookForm = document.getElementById("createBook");
+let chosenImg = document.getElementById("chosenbookImg");
+let inputImgFile = document.getElementById("bookImage");
+let inputTitle = document.getElementById("bookTitle");
+let inputAuthor = document.getElementById("bookAuthor");
+let inputDescription = document.getElementById("bookDescription");
+let inputLength = document.getElementById("bookLength");
+let inputRating = document.getElementById("bookRating");
+let inputGenre = document.getElementById("bookGenre");
 let inputAudio = document.getElementById("audio");
 let inputBook = document.getElementById("book");
-let inputRating = document.getElementById("bookRating");
-let inputLength = document.getElementById("bookLength");
-let inputDescription = document.getElementById("bookDescription");
-let inputAuthor = document.getElementById("bookAuthor");
-let inputTitle = document.getElementById("bookTitle");
-let inputImgFile = document.getElementById("bookImage");
-let bookImagesProfile = document.getElementById("defaultBookImages");
 let addBookButt = document.getElementById("addBookBtn");
 
 //dropdown button
 const menuButton = document.getElementById("menuToggle");
 let dropdownMenu = document.querySelector("#dropDownMenu");
 
-//*---open dropdown (by click or pushing enter)
 
+//*---open dropdown (by click or pushing enter)
 const openDropdown = () => {
   if (dropdownMenu.classList.contains("dropdown"))
   {dropdownMenu.classList.remove("dropdown");
@@ -61,9 +63,7 @@ document.addEventListener('keydown', function(event){
 const closeDropDown = () => {
   dropdownMenu.classList.add("dropdown");
 }
-
 document.getElementById("closeDropDown").addEventListener("click", closeDropDown);
-
 document.addEventListener('keydown', function(event){
   if(event.key === "Escape")
   {
@@ -73,9 +73,7 @@ document.addEventListener('keydown', function(event){
   }
 });
 
-//*---transforming date to more readable text
-
-
+//*---transforming date to more readable text 
 const dateTransform = (nr) => {
 if (nr === "04"){
   return "April"

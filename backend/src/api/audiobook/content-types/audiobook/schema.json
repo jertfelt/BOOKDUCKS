@@ -13,13 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "default": "Boktitel",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 60,
+      "default": "Beskrivning på max 60 tecken"
     },
     "author": {
-      "type": "string"
+      "type": "string",
+      "default": "Författare",
+      "required": true
     },
     "rating": {
       "type": "integer",
@@ -39,7 +45,8 @@
       ]
     },
     "length": {
-      "type": "string"
+      "type": "string",
+      "default": "22"
     },
     "genres": {
       "type": "relation",

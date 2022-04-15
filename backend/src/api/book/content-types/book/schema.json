@@ -13,20 +13,25 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "default": "Bokens titel",
+      "required": true
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 60,
+      "default": "En beskrivning på max 60 tecken"
     },
     "rating": {
       "type": "integer",
-      "required": true,
+      "required": false,
       "max": 5,
       "min": 0,
       "default": 2
     },
     "length": {
-      "type": "string"
+      "type": "string",
+      "default": "33"
     },
     "picture": {
       "type": "media",
@@ -37,7 +42,9 @@
       ]
     },
     "author": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "Författaren Author"
     },
     "genres": {
       "type": "relation",

@@ -90,12 +90,10 @@
             Lösenord:</label>
           <input type="text"
           placeholder="Lösenord"  class="input__password">
-          <span class="row">
+          
             <button class="submitLogin">
               Logga in</button>
-            <button id="forgottenPassword">
-              Glömt lösenord?</button>
-          </span>
+          
           <p id="errorMessageContainer"></p>
         </div>
       <span class="homepage__login--register">
@@ -146,81 +144,126 @@
         <span id="messageRegister" class="error text--light"></span>
         </div>
       </article>
-
-      <div class="genre">
-        
-     
-        <h2>Våra genres:</h2>
-        <div id="genregrid"></div>
-      </div>
       </section>
     </section>
 
     <section id="profilePage" class="section">
       <div id="renderedProfile">
-       
       </div>
       
       <div id="profileUpload" class="profile__main">
+        <img src="./styles/img/book-default.png"
+        class="profile__img">
         <h2>Vill du låna ut fler böcker?</h2>
         <article class="profile__upload">
-          <div class="profile__upload--form">
-            <label for="bookTitle">Titel</label>
-            <input type="text" 
+          <form method="post" 
+          id="createBook" 
+          class="profile__upload--form">
+          <div class="profile__upload--formimg">
+            <label 
+            for="bookImage">
+            <p>Ladda upp bild på boken, eller välj en default bild. Bildformat kan vara jpg/png.</p>
+              <img 
+              class="profile__upload--chosenimg"
+              alt="" 
+              id="chosenBookImg">
+            </label>
+            <input 
+            name="bookImage"
+            type="file"
+            id="bookImage" 
+            > 
+            <div 
+            id="defaultBookImages"
+            class="profile__grid">
+            </div> 
+          </div>
+          <div class="profile__upload--formlabels">
+            <label 
+            for="bookTitle">
+            Titel
+            </label>
+            <input 
+            name="bookTitle"
+            type="text" 
             placeholder="Den gamle och havet" id="bookTitle">
-            <label for="bookAuthor">Författare</label>
-            <input type="text" 
+            <label 
+            for="bookAuthor">
+              Författare</label>
+            <input 
+            name="bookAuthor"
+            type="text" 
             placeholder="Ernest Hemingway"
             id="bookAuthor">
-            <label for="bookDescription">Beskrivning</label>
-            <input id="bookDescription" class="profile__upload--textarea"
-            value="Ingen beskrivning"
-            placeholder="En mycket fin bok om en dum val och en glad landkrabba">
-            <label for="bookLength">Längd (minuter eller sidor)</label>
-            <input type="text" 
+            <label 
+            for="bookDescription">
+            Beskrivning</label>
+            <input 
+            name="bookDescription"
+            id="bookDescription" class="profile__upload--textarea"
+            value="Beskrivning max 60 tecken"
+            >
+            <label 
+            for="bookLength">
+            Längd (minuter eller sidor)</label>
+            <input 
+            name="bookLength"
+            type="text" 
             id="bookLength"
             value="0"
             placeholder="345">
-            <label for="bookRating">Betyg</label>
-            <input type="number"
+            <label 
+            for="bookRating">
+            Betyg</label>
+            <input 
+            name="bookRating"
+            type="number"
             id="bookRating"
             value="0"
             placeholder="3">
+            <label 
+            for="bookGenre">
+            Genre</label>
+            </div>
+            <div class="profile__upload--select">
+            <select 
+            name="bookGenre" 
+            id="bookGenre">
+            <!--option values rendered here-->
+            </select> 
             <span>
+            </div>
+            <div class="profile__upload--radiobtn">  
             <p>Vilken typ av bok är det?</p>
-            <input type="radio" 
+            <input 
+            type="radio" 
             id="audio" 
             name="type"
             value="audiobook">
-            
-            <label for="audio">Ljudbok</label>
-            <input type="radio" 
+            <label 
+            for="audio">
+            Ljudbok</label>
+            <input 
+            type="radio" 
             id="book"
             name="type"
             value="book"
             checked >
-            <label for="book">Vanlig bok</label>
-          </span>
-          <div>
-            <span>
-            <p>Ladda upp bild på boken, eller välj en default bild. Bildformat kan vara jpg/png.</p>
-            <input type="file"
-            id="bookImage" 
-            > 
-            </span>
-            <div id="defaultBookImages"
-            class="profile__grid">
+            <label 
+            for="book">
+            Vanlig bok</label>
             </div>
-          </div>
-          </div>
-          <button id="addBookBtn">Lägg till bok</button>
+            <button 
+            type="submit"
+            id="addBookBtn">
+              Lägg till bok</button>
+          </form>     
+          <span id="profileError"></span>
         </article>
       </div>
     </section>
   </main>
   <footer class="footer">
-   
-
     <img src="https://avatars.githubusercontent.com/u/30622818?s=40&v=4" class="logotype__jertfelt"><span>
     <h4>Det här är en skoluppgift.</h4>
     <p>Se mer: <a href="https://github.com/jertfelt/BOOKDUCKS">Github</a></p>
@@ -231,6 +274,7 @@
   <script src="./javascript/utilities.js"></script>
   <script src="./javascript/queries.js"></script>
   <script src="./javascript/renderitems.js"></script>
+  <script src="./javascript/genres.js"></script>
   <script src="./javascript/loginandprofile.js"></script>
   <script src="./javascript/register.js"></script>
   <script src="./javascript/userCreateBook.js"></script>

@@ -1,19 +1,14 @@
 allBooks = [];
 
 
+
 let getHomepage = async () => {
   let {data} = await axios.get("http://localhost:1337/api/homepage?populate=*", {
   })
   renderHome(data);
 }
 
-let getGenres = async () => {
-  let {data} = await axios.get("http://localhost:1337/api/genres?populate=*",
-  {
 
-  })
-  renderGenres(data);
-}
 
 let getAllBooks = async () => {
   let {data} = await axios.get("http://localhost:1337/api/books?populate=*",
@@ -46,38 +41,22 @@ let renderHome = (data) => {
     homepageHero.appendChild(homepageContent)
 }
 
-
-//Genres (at homepage):
-let renderGenres = (item) => {
-  let homepageGenres = document.createElement("article");
-  homepageGenres.classList.add("homepage__gridgenres");
-  let arrayOfGenres = item.data;
-  arrayOfGenres.forEach(object => {
-    // let pictures = "http://localhost:1337" +object.attributes.picture.data.attributes.url; 
-    let genreArticleContent = document.createElement("div");
-    genreArticleContent.innerHTML= `
-    <div class="genre__content genre__hover">
-    <h2>${object.attributes.title}</h2>
-    <p>${object.attributes.description}</p>
-    <button class="button__genre" id="Genre${object.id}">
-    Se alla böcker i den här kategorin</button>
-    </div>`
-    homepageGenres.appendChild(genreArticleContent);
-  })
-  homepageGenreGrid.appendChild(homepageGenres);
-}
-
 let renderAllBooks = (info) => {
   let bookGrid = document.createElement("article");
   bookGrid.classList.add("homepage__grid");
   let arrayOfBooks = info.data;
  
   arrayOfBooks.forEach(book => {
+    // console.log(book)
+    //pushing to allBooks for profilepage:
     allBooks.push(book);
+
+    //creating grid:
     let bookElem = document.createElement("div");
     bookElem.classList.add("homepage__grid--griditem")
     let genres = [];
     let bookGenres = book.attributes.genres.data;
+   
     bookGenres.forEach(genre => {
       genres.push(genre.attributes.title);
     })
@@ -169,6 +148,6 @@ const getAll = () => {
 
 getHomepage();
 getAll();
-getGenres();
+
 
 

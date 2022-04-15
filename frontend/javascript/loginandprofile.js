@@ -17,7 +17,7 @@ let renderProfile = (data) => {
   let users = [];
   let userLocal = localStorage.getItem("userObj");
   let formattedUser = JSON.parse(userLocal);
-  console.log(formattedUser.email)
+  
   data.forEach(item => {
     //*check for user
     if (item.email === formattedUser.email || item.username === formattedUser.username){
@@ -36,28 +36,33 @@ let renderProfile = (data) => {
        
         //*if match:
         if (userInBooks.email === formattedUser.email || userInBooks.username === formattedUser.username){
+          
           let userBooks = [];
           userBooks.push(book);
           userElement.innerHTML = `<div class="profile__welcome">
           <h2>Hej ${item.username}!</h2>
           <span>
+          <img src="./styles/img/ducksolo--blue.png"
+          class="profile__img">
           <p>Användarnamn: ${item.username}</p>
+          <p>Medlemsnummer: 0${item.id} </p>
           <p>Email:  ${item.email}</p>
           <p>Medlem sedan : ${memberSince} </p>
           </span>
           </div>
           <h2>Det här är dina böcker: </h2>
           `
-          
           userBooks.forEach(book => {
             let booksgrid = document.createElement("div");
-            booksgrid.classList.add("homepage__grid--griditem");
+            booksgrid.classList.add("profile__grid--griditem");
+            
             booksgrid.innerHTML = `
             <div class="book__user">
             <h3>${book.attributes.author}</h3>
             <h4>${book.attributes.title}</h4>
             <p>Betyg: ${book.attributes.rating}/5</p>
             <p>Beskrivning: ${book.attributes.description}</p>
+            <p>Genre: ${book.attributes.genres.data[0].attributes.title}</p>
             <p>Typ av bok: ${book.attributes.type} </p>
             </div>
             `
@@ -72,8 +77,6 @@ let renderProfile = (data) => {
   renderedProfile.appendChild(divElement);
 }
 
-
-    
 
 if(sessionStorage.getItem("token")){
   let userLocal = localStorage.getItem("userObj");
@@ -99,6 +102,7 @@ if(sessionStorage.getItem("token")){
 const confirmLogin = () => {
   if(sessionStorage.getItem("token")){
     getProfile();
+    changeActivePage("profilePage");
   }
 }
 
@@ -116,13 +120,12 @@ let login = async () => {
   })
   .then(response => {
     let token = response.data.jwt;
-    console.log(response.data.user)
+ 
     sessionStorage.setItem("token", token)
-    
     localStorage.setItem("userObj", JSON.stringify(response.data.user))
     let userLocal = localStorage.getItem("userObj");
     let formattedUser = JSON.parse(userLocal);
-    console.log(formattedUser.username)
+ 
     loggedInNav.innerHTML=`Hej <b>${formattedUser.username}</b>`
     confirmLogin();
   })
@@ -145,3 +148,4 @@ loggingIn.forEach(button => {
     login();
   })
 })
+
