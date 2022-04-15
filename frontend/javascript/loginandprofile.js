@@ -13,7 +13,7 @@ let renderProfile = (data) => {
   const divElement = document.createElement("div");
   let userElement = document.createElement("article")
   const booksElement = document.createElement("article");
-  booksElement.classList.add("homepage__grid");
+  booksElement.classList.add("profile__grid");
   let users = [];
   let userLocal = localStorage.getItem("userObj");
   let formattedUser = JSON.parse(userLocal);
@@ -40,30 +40,36 @@ let renderProfile = (data) => {
           let userBooks = [];
           userBooks.push(book);
           userElement.innerHTML = `<div class="profile__welcome">
+          <span class="row--between">
+          <span class="profile__details">
           <h2>Hej ${item.username}!</h2>
-          <span>
-          <img src="./styles/img/ducksolo--blue.png"
-          class="profile__img">
           <p>Användarnamn: ${item.username}</p>
           <p>Medlemsnummer: 0${item.id} </p>
           <p>Email:  ${item.email}</p>
           <p>Medlem sedan : ${memberSince} </p>
           </span>
+          <img src="./styles/img/ducksolo--blue.png"
+          class="profile__img">
+          </span>
           </div>
-          <h2>Det här är dina böcker: </h2>
+          <h2 class="leftmargin">Det här är dina böcker: </h2>
           `
           userBooks.forEach(book => {
             let booksgrid = document.createElement("div");
             booksgrid.classList.add("profile__grid--griditem");
             
             booksgrid.innerHTML = `
-            <div class="book__user">
-            <h3>${book.attributes.author}</h3>
-            <h4>${book.attributes.title}</h4>
+            <div>
+            <h3>${book.attributes.title}</h3>
+            <span class="row--between margintop--none">
+            <h4>${book.attributes.author}</h4>
             <p>Betyg: ${book.attributes.rating}/5</p>
+            </span>
             <p>Beskrivning: ${book.attributes.description}</p>
+            <span class="row--between margintop--small">
             <p>Genre: ${book.attributes.genres.data[0].attributes.title}</p>
             <p>Typ av bok: ${book.attributes.type} </p>
+            </span>
             </div>
             `
             booksElement.appendChild(booksgrid);

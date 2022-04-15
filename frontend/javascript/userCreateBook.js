@@ -3,7 +3,7 @@ let genreID = [];
 addBookButt.addEventListener("click", (e) => {
   e.preventDefault();
   if (inputAuthor.value === "" || inputTitle.value === "" || inputImgFile.value ==""){
-    document.getElementById("profileError").innerHTML=`<h3>Följande fält får inte vara tomma:</h3><br>
+    document.getElementById("profileError").innerHTML=`<h3 class="text--red">Följande fält får inte vara tomma:</h3>
     <ul>
     <li>Titel</li>
     <li>Författare</li>

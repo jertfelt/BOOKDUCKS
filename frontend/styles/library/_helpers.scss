@@ -2,3 +2,31 @@
 .hidden{
   display:none;
 }
+
+.row{
+  &--between{ @include flexInst(row,center,space-between);}
+ 
+}
+
+.leftmargin{
+  padding-left:2rem;
+}
+
+.margintop{
+  &--none{
+    padding:0;
+    margin-top:-1rem;
+    margin-bottom:-1rem;
+  }
+  &--small{
+    padding:0;
+    margin-top:-0.5rem;
+   
+  }
+}
+
+.twocolumns{
+@include breakpoint(medium-tablet-max){
+  @include flexInst(row,center,center)
+} 
+}

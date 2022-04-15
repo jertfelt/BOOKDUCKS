@@ -4,10 +4,11 @@
   padding-bottom:3rem;
   
   &--duck{
-    max-height:200px;
+    max-height:300px;
   }
 
   &--info{
+    p{font-weight: 700;}
     h3{
       font-family: $font--heading;
     }
@@ -15,7 +16,7 @@
     font-family: $font--heading;
     font-size:48px;
     line-height:1.3rem;
-    color: $color--darkred;
+    color: $color--primered;
     }
 
   max-width: 40%;
@@ -27,14 +28,19 @@
   }
 
   &--form{
+    h3{
+      margin-bottom:2rem;
+    }
+    
+    margin-top:3rem;
     background-color: $color--primered;
     border-radius: 19px;
     color: $color--lightback;
+    font-weight:bold;
     padding:2rem;
-    @include flexInst(column,center,center);
+    @include flexInst(column,flex-start,center);
     label{
       margin-bottom:0.3rem;
-      
     }
     input{
       margin-bottom:0.5rem;
@@ -42,14 +48,17 @@
       color: $color--black;
       border:none;
       padding:0.3rem;
+      width:60%;
     }
     span{
-      @include flexInst(column,center,center);
-      h5{margin-top:0;
-      font-weight:400;
+      @include flexInst(column,flex-start,center);
+      h5{margin-top:0.2rem;
+     
       color: $color--lightback;
-      width:40%;
+     
+      font-weight:bold;
       }
+      width:100%;
     }
     button{
       padding:0.5rem;
@@ -58,6 +67,7 @@
       color: $color--black;
       font-weight: bold;
       border-radius: 9px;
+      margin-bottom:-1rem;
     }
     button:hover{
       background-color: $color--lightback;

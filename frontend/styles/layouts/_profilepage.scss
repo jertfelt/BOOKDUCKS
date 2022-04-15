@@ -1,0 +1,119 @@
+.profile{
+  @include flexInst(column,center,center);
+  padding-bottom:3rem;
+  &__welcome{
+    padding:2rem;
+    p{
+      font-weight:700;
+    }
+  }
+  &__img{
+    border-radius: 50%;
+    max-height:200px;
+    &--2{
+      max-height:200px;
+    }
+  }
+
+  &__grid{
+    background-color: $color--lightback;
+    border-radius:9px;
+    @include flexInst(column,center,center);
+    padding:1rem;
+
+    &--griditem{
+      padding:2rem;
+      width:80%;
+      align-items: center;
+   
+      h3{
+        background-color: $color--primered;
+          padding:1rem;
+          color:$color--lightback;
+      }
+      h4{
+        color:$color--primered;
+      }
+      
+    }
+  }
+  &__main{
+    h2{
+      font-family: $font--heading;
+      color: $color--primered;
+    }
+    @include flexInst(column,center,space-between);
+    padding:2rem;
+    margin:2rem;
+  }
+  h2{
+    font-family: $font--heading;
+  }
+  &__upload{
+    border-radius:9px;
+    @include flexInst(column,center,space-around);
+    background-color: $color--lightback;
+    font-weight:600;
+    padding:2rem;
+    &--form{
+      @include flexInst(column,flex-start,center);
+      button{
+        background-color: $color--primered;
+        color: $color--orange;
+        font-weight: bold;
+        border:none;
+        border-radius: 9px;
+        padding:0.5rem;
+      }
+    }
+    &--formimg{
+      @include flexInst(column,flex-start,space-around);
+      text-align: left;
+      margin-bottom:1rem;
+      label{
+        margin-bottom:1rem;
+      }
+    }
+    &--formlabels{
+      @include flexInst(column,flex-start,space-around);
+      
+      label{
+        margin-top:0.7rem;
+        padding-bottom:0.3rem;
+      }
+      input{
+        font-weight: bold;
+        border:none;
+        background-color: $color--white;
+        padding:0.2rem;
+      }
+    }
+    &--length{
+      max-width: 15%;
+   
+    }
+    &--rating{
+      margin-top:1rem;
+      
+      input{
+        padding: auto;
+      
+        max-width: 15%;
+      }
+    }
+    &--select{
+      padding:0.3rem;
+      font-weight: bold;
+      background-color: $color--white;
+      border:none;
+     
+    }
+    &--radiobtn{
+     margin-bottom:1rem;
+      @include flexInst(column,flex-start,center);
+    }
+   
+
+  }
+}
+

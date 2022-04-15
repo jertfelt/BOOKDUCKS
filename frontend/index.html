@@ -59,6 +59,7 @@
   </header>
 
   <main class="main">
+    
     <section id="homepage" class="section">
       <div id="hero" class="hero">
       </div>
@@ -90,10 +91,8 @@
             Lösenord:</label>
           <input type="text"
           placeholder="Lösenord"  class="input__password">
-          
             <button class="submitLogin">
               Logga in</button>
-          
           <p id="errorMessageContainer"></p>
         </div>
       <span class="homepage__login--register">
@@ -148,12 +147,14 @@
     </section>
 
     <section id="profilePage" class="section">
-      <div id="renderedProfile">
+    <div class="twocolumns">
+      <div id="renderedProfile" class="profile">
       </div>
       
       <div id="profileUpload" class="profile__main">
         <img src="./styles/img/book-default.png"
-        class="profile__img">
+        class="profile__img--2">
+        <div>
         <h2>Vill du låna ut fler böcker?</h2>
         <article class="profile__upload">
           <form method="post" 
@@ -162,23 +163,17 @@
           <div class="profile__upload--formimg">
             <label 
             for="bookImage">
-            <p>Ladda upp bild på boken, eller välj en default bild. Bildformat kan vara jpg/png.</p>
-              <img 
-              class="profile__upload--chosenimg"
-              alt="" 
-              id="chosenBookImg">
+            1. Ladda upp bokomslag.<br> Bildformat kan vara jpg/png.
             </label>
             <input 
             name="bookImage"
             type="file"
             id="bookImage" 
             > 
-            <div 
-            id="defaultBookImages"
-            class="profile__grid">
-            </div> 
+            
           </div>
           <div class="profile__upload--formlabels">
+            <p>2. Fyll i samtliga uppgifter</p>
             <label 
             for="bookTitle">
             Titel
@@ -203,38 +198,45 @@
             id="bookDescription" class="profile__upload--textarea"
             value="Beskrivning max 60 tecken"
             >
+           
             <label 
             for="bookLength">
-            Längd (minuter eller sidor)</label>
+            Längd (minuter/ sidor)</label>
             <input 
             name="bookLength"
             type="text" 
+            class="profile__upload--length"
             id="bookLength"
             value="0"
             placeholder="345">
+            
+            <span class="profile__upload--rating">
+              <label 
             <label 
             for="bookRating">
-            Betyg</label>
+            Betyg (1-5)</label>
             <input 
             name="bookRating"
             type="number"
             id="bookRating"
             value="0"
             placeholder="3">
+            </span>
             <label 
             for="bookGenre">
             Genre</label>
-            </div>
-            <div class="profile__upload--select">
+          
             <select 
+            class="profile__upload--select"
             name="bookGenre" 
             id="bookGenre">
             <!--option values rendered here-->
             </select> 
+          </div>
             <span>
-            </div>
             <div class="profile__upload--radiobtn">  
-            <p>Vilken typ av bok är det?</p>
+            <p>3. Vilken typ av bok?</p>
+            <span>
             <input 
             type="radio" 
             id="audio" 
@@ -243,6 +245,8 @@
             <label 
             for="audio">
             Ljudbok</label>
+          </span>
+          <span>
             <input 
             type="radio" 
             id="book"
@@ -251,7 +255,7 @@
             checked >
             <label 
             for="book">
-            Vanlig bok</label>
+            Vanlig bok</label></span>
             </div>
             <button 
             type="submit"
@@ -261,6 +265,8 @@
           <span id="profileError"></span>
         </article>
       </div>
+      </div>
+    </div>
     </section>
   </main>
   <footer class="footer">
