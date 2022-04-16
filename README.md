@@ -32,7 +32,6 @@ HTML5
 Några problem som jag löste på mitt sätt:
 I Strapi kringgick jag problemet (de jobbar på att fixa det) med att Users för tillfället inte visar upp något på populate=* genom att göra Relation mellan Users och Books/Audiobooks. 
 
-
 ![image](https://user-images.githubusercontent.com/30622818/163668418-e0ac46e0-6e86-4f56-a662-da72b1919582.png)
 ![image](https://user-images.githubusercontent.com/30622818/163668526-52a1b920-27a0-446a-b001-fbcf6688ea3d.png)
 ![image](https://user-images.githubusercontent.com/30622818/163668531-fe8c370c-2f10-4f3f-855f-0a5cd31e71bf.png)
