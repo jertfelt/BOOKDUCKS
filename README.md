@@ -11,8 +11,6 @@ Funktioner som saknas men som kommer att tillkomma närhelst jag hinner:
 - Kunna ta bort en bok man laddat upp (DELETE)
 - Att sortera efter genre
 
-![ducksolo--blue](https://user-images.githubusercontent.com/30622818/163668541-5aaec6e4-34bc-4a9a-9912-479f7256fc77.png)
-
 Verktyg:
 Axios
 Postman
@@ -30,6 +28,11 @@ Språk:
 Javascript
 CSS/SASS
 HTML5
+
+Några problem som jag löste på mitt sätt:
+I Strapi kringgick jag problemet (de jobbar på att fixa det) med att Users för tillfället inte visar upp något på populate=* genom att göra Relation mellan Users och Books/Audiobooks. 
+
+![ducksolo--blue](https://user-images.githubusercontent.com/30622818/163668541-5aaec6e4-34bc-4a9a-9912-479f7256fc77.png)
 
 ![image](https://user-images.githubusercontent.com/30622818/163668418-e0ac46e0-6e86-4f56-a662-da72b1919582.png)
 ![image](https://user-images.githubusercontent.com/30622818/163668526-52a1b920-27a0-446a-b001-fbcf6688ea3d.png)
