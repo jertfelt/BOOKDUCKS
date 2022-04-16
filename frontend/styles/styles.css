@@ -11,16 +11,20 @@
 }
 
 .text--red {
-  color: #4e0909;
+  color: #a12222;
 }
 
 .book__content {
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
   min-height: 500px;
   max-height: 500px;
   border-radius: 29px;
   padding: 0.3rem 1rem;
   padding-bottom: 1rem;
+}
+
+.book__content--description {
+  padding-left: 1rem;
 }
 
 .book__content span {
@@ -36,7 +40,7 @@
 
 .book__content span h4 {
   font-family: "Arvo", serif;
-  color: #4e0909;
+  color: #a12222;
 }
 
 .book__content--row {
@@ -64,14 +68,15 @@
 .book__category {
   background-color: #ac4747;
   padding: 0.5rem;
-  color: blanchedalmond;
+  color: #f8e9d4;
   margin-bottom: -0.5rem;
   text-align: center;
 }
 
 .book__user {
   width: 80%;
-  line-height: 1rem;
+  line-height: 0.3rem;
+  padding-left: 1rem;
 }
 
 .book__user p {
@@ -80,14 +85,14 @@
 
 .book__user h4 {
   font-family: "Arvo", serif;
-  color: #4e0909;
+  color: #a12222;
 }
 
 .header {
   background-color: #ac4747;
   padding: 1rem;
   margin: 0 auto;
-  color: #ffc800;
+  color: #f8d03e;
 }
 
 .header .logotype {
@@ -146,7 +151,7 @@
 }
 
 .header #loggedinUser {
-  color: blanchedalmond;
+  color: #f8e9d4;
   margin-right: 30px;
 }
 
@@ -163,19 +168,19 @@
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: blanchedalmond;
+  color: #f8e9d4;
   font-weight: bold;
 }
 
 .header__menu a {
   text-decoration: none;
   font-weight: bold;
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 body {
   margin: 0 auto;
-  background-color: #ffc800;
+  background-color: #f8d03e;
   font-family: "Nunito Sans", Arial, sans-serif;
 }
 
@@ -194,7 +199,7 @@ body {
 }
 
 .hero__content {
-  background-color: #ffc800;
+  background-color: #f8d03e;
   padding: 2rem;
   position: absolute;
   top: 50%;
@@ -245,7 +250,7 @@ body {
 .homepage__login {
   background-color: #ac4747;
   margin-top: -1rem;
-  color: blanchedalmond;
+  color: #f8e9d4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -317,17 +322,17 @@ body {
   margin-top: 0.8rem;
   padding: 0.5rem;
   border: none;
-  background-color: #ffc800;
+  background-color: #f8d03e;
   font-weight: bold;
 }
 
 .homepage__login--form button:hover {
   background-color: #000;
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 .homepage__login--register {
-  background-color: #ffc800;
+  background-color: #f8d03e;
   color: #000;
   padding: 1rem;
   margin-top: 3rem;
@@ -360,7 +365,7 @@ body {
   padding: 0.5rem;
   border: none;
   background-color: #ac4747;
-  color: blanchedalmond;
+  color: #f8e9d4;
   font-weight: bold;
 }
 
@@ -440,7 +445,7 @@ body {
       justify-content: space-around;
   background-color: #ac4747;
   padding: 1rem;
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 .footer img {
@@ -448,10 +453,11 @@ body {
 }
 
 .footer a {
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 .register__welcome {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,7 +507,7 @@ body {
   margin-top: 3rem;
   background-color: #ac4747;
   border-radius: 19px;
-  color: blanchedalmond;
+  color: #f8e9d4;
   font-weight: bold;
   padding: 2rem;
   display: -webkit-box;
@@ -529,7 +535,7 @@ body {
 
 .register__welcome--form input {
   margin-bottom: 0.5rem;
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
   color: #000;
   border: none;
   padding: 0.3rem;
@@ -555,13 +561,14 @@ body {
 
 .register__welcome--form span h5 {
   margin-top: 0.2rem;
-  color: blanchedalmond;
+  color: #f8e9d4;
+  width: 60%;
   font-weight: bold;
 }
 
 .register__welcome--form button {
   padding: 0.5rem;
-  background-color: #ffc800;
+  background-color: #f8d03e;
   border: none;
   color: #000;
   font-weight: bold;
@@ -570,7 +577,7 @@ body {
 }
 
 .register__welcome--form button:hover {
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
 }
 
 .error {
@@ -580,11 +587,11 @@ body {
 }
 
 .error a {
-  color: #ffc800;
+  color: #f8d03e;
 }
 
 .genre {
-  background-color: #ffc800;
+  background-color: #f8d03e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -611,11 +618,11 @@ body {
   margin-top: 3rem;
   font-family: "Arvo", serif;
   font-weight: bold;
-  color: #4e0909;
+  color: #a12222;
 }
 
 .genre__content {
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
   padding: 1rem;
   min-height: 300px;
   border-radius: 19px;
@@ -650,14 +657,15 @@ body {
 
 .genre__content:hover {
   background-color: #ac4747;
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 .genre__content:hover h2 {
-  color: #ffc800;
+  color: #f8d03e;
 }
 
 .profile {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +700,7 @@ body {
 }
 
 .profile__grid {
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
   border-radius: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,7 +729,7 @@ body {
 .profile__grid--griditem h3 {
   background-color: #ac4747;
   padding: 1rem;
-  color: blanchedalmond;
+  color: #f8e9d4;
 }
 
 .profile__grid--griditem h4 {
@@ -769,7 +777,7 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: blanchedalmond;
+  background-color: #f8e9d4;
   font-weight: 600;
   padding: 2rem;
 }
@@ -792,7 +800,7 @@ body {
 
 .profile__upload--form button {
   background-color: #ac4747;
-  color: #ffc800;
+  color: #f8d03e;
   font-weight: bold;
   border: none;
   border-radius: 9px;
@@ -915,7 +923,7 @@ body {
 }
 
 .mainmenu__mobile li a {
-  color: blanchedalmond;
+  color: #f8e9d4;
   font-size: 16px;
   font-weight: bold;
   display: block;
@@ -925,7 +933,7 @@ body {
 }
 
 .mainmenu__mobile li a:hover {
-  color: #ffc800;
+  color: #f8d03e;
 }
 
 .nav__button {

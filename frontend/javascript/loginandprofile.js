@@ -1,5 +1,6 @@
 let logout = () => {
   sessionStorage.clear();
+  localStorage.clear();
   changeActivePage("homepage");
 }
 
@@ -85,6 +86,7 @@ let renderProfile = (data) => {
 
 
 if(sessionStorage.getItem("token")){
+  if (localStorage.getItem("userObj")){
   let userLocal = localStorage.getItem("userObj");
   let user = JSON.parse(userLocal);
   //*functionaly in navbar:
@@ -103,7 +105,7 @@ if(sessionStorage.getItem("token")){
     logout();
   })
   getProfile();  
-}
+}}
 
 const confirmLogin = () => {
   if(sessionStorage.getItem("token")){

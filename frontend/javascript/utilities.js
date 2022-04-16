@@ -10,7 +10,6 @@ let seeAllBooks = document.getElementById("allbooks");
 let onlyBooks = document.getElementById("books");
 let onlyAudio = document.getElementById("audiobooks");
 
-
 //--login and register
 let becomeMember = document.querySelectorAll(".button__becomemember");
 let inputUserName = document.querySelectorAll(".input__username");

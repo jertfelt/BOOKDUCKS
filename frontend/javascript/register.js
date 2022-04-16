@@ -17,13 +17,18 @@ let register = async () => {
       let token = response.data.jwt;
       sessionStorage.setItem("token", token);
       localStorage.setItem("user", username)
+      localStorage.setItem("userObj", JSON.stringify(response.data.user))
+      let userLocal = localStorage.getItem("userObj");
+      let formattedUser = JSON.parse(userLocal);
       registerMessage.innerHTML=`
-      <p>Lyckad registrering. Välkommen ${newUsername.value}. Nu är du inloggad</p>`
+      <p>Lyckad registrering. Välkommen ${formattedUser.username}. Nu är du inloggad</p>`
       console.log("User registration successful!")
-      loggedInNav.innerHTML=`Hej <b>${newUsername.value}<b>`
+      loggedInNav.innerHTML=`Hej <b>${formattedUser.username}<b>`
       confirmLogin();
     })
     .catch(error => {
+      
+        console.log(error)
       let errorMessage = error.response.data.error.message;
       if (errorMessage == "email must be a valid email"){
         // alert("Du behöver fylla i en riktig emailadress, ankan!")
@@ -47,12 +52,16 @@ let register = async () => {
     }
       if (errorMessage == "Email is already taken"){
         // alert("Hoppsan, någon använder redan den här mailen! Du kanske vill återställa ditt lösenord?")
-        registerMessage.innerHTML=`<p>Hoppsan, någon använder redan den här mailen!<br> Du kanske vill <a href="#">återställa ditt lösenord?</a></p>`
+        registerMessage.innerHTML=`<p>Hoppsan, någon använder redan den här mailen!</p>`
       }
-      
-    })
+      else{
+        registerMessage.innerHTML=`<p>Något stämmer inte, prova gärna igen</p>`
+      }
+    }
+    )
 }
 
 registerNew.addEventListener("click", () => {
   register();
 });
+

@@ -6,6 +6,10 @@
     border-radius: 29px;
     padding: 0.3rem 1rem;
     padding-bottom:1rem;
+
+    &--description{
+      padding-left:1rem;
+    }
     
     span{
       margin-left:10px;
@@ -40,15 +44,16 @@
     color:$color--lightback;
     margin-bottom:-0.5rem;
     text-align: center;
+   
   }
 
   &__user{
     width:80%;
-    line-height: 1rem;
+    line-height: 0.3rem;
     p{
       font-weight:600;
     }
-    
+    padding-left:1rem;
     h4{
       font-family: $font--heading;
       color: $color--darkred;

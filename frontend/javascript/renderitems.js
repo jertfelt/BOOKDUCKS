@@ -1,14 +1,10 @@
 allBooks = [];
 
-
-
 let getHomepage = async () => {
   let {data} = await axios.get("http://localhost:1337/api/homepage?populate=*", {
   })
   renderHome(data);
 }
-
-
 
 let getAllBooks = async () => {
   let {data} = await axios.get("http://localhost:1337/api/books?populate=*",
@@ -63,7 +59,7 @@ let renderAllBooks = (info) => {
     let pictures = "http://localhost:1337" + book.attributes.picture.data[0].attributes.url
     bookElem.innerHTML=`
     <div class="book__content">
-    <p class="book__category text--uppercase">Kategori:<br> ${genres}</p>
+    <p class="book__category text--uppercase">Kategori:<br> ${genres} </p>
     
     <span class="book__content--row">
     <span class="book__content--rowright">
